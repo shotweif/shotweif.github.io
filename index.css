@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* font-family: 'Permanent Marker', cursive; */
+
+.space{
+    height: 10vh;
+}
+/* --- /
+.time_mode {
+    display: flex;
+    position: fixed;
+    top: 13vh;
+    right: 4vh;
+    z-index: 1000;
+}
+.time_mode button{
+    border: none;
+    height: 4vh;
+    width: 7vh;
+    border-radius: 15px;
+    box-shadow: 0 0 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+.time_mode button i{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+/* --- */
+.goUp{
+    display: flex;
+    position: fixed;
+    bottom: 2vh;
+    right: 4vh;
+}
+.goUp a{
+    background-color: rgb(199, 186, 186);
+    color: rgb(29, 29, 29);
+    text-decoration: none;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+.goUp a img{
+    width: 100%;
+    height: auto;
+}
+/* ---Navegacion--- */
+.nav_bar_line{
+    width: 100%;
+    height: 11vh;
+    position: fixed;
+    z-index: 1000;
+
+    background: linear-gradient(100deg, rgb(104, 48, 136) 25%, rgb(243, 9, 9) 50%, rgb(104, 48, 136) 75%);
+    background-repeat: repeat;
+    animation: gradient 5s linear infinite;
+}
+@keyframes gradient {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -80rem 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.nav_bar{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(48, 48, 48);
+    /*border-bottom: 1vh solid rgb(221, 62, 62);*/
+    font-family: 'Permanent Marker', cursive;
+    /*position: fixed;*/
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*-- Logotipo --*/
+.image_logo{
+    /*width: 10%;*/
+    height: 4vw;
+    width: auto;
+    /*background-color: blueviolet;*/
+}
+.image_logo img{
+    height: 100%;
+    width: auto;
+}
+/*-- Redes Sociales --*/
+.social_media_nav{
+    /*width: 20%;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: blueviolet;*/
+}
+.social_media_nav a{
+    margin: 0 1vh;
+    height: 2.5vw;
+    width: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-style: dashed;
+    transition: .5s;
+}
+.social_media_nav a:hover{
+    box-shadow: 0 0 8px rgb(211, 66, 66);
+}
+.social_media_nav a img{
+    height: 100%;
+}
+/*-- Navegacion --*/
+.cont_btn_nav{
+    width: 70%;
+    text-align: center;
+
+    /*position: fixed;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: blueviolet;*/
+
+}
+.cont_btn_nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 .6vh;
+    padding: .5vh 1vh;
+}
+.cont_btn_nav .btn_nav{
+    color: white;
+    font-size: 2.6vh;
+    border-radius: 10px;
+    transition: .5s ;
+}
+    /* ---Linea--- */
+.cont_btn_nav .btn_nav::after{
+    display: block;
+    content: "";
+    margin: auto;
+    width: 0;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s;
+}
+    /* ---Rolover--- */
+.cont_btn_nav .btn_nav:hover::after{
+    width: 100%;
+    background-color: rgb(242, 13, 13);
+}
+.cont_btn_nav .btn_nav:hover{
+    text-shadow: 0px 0px 5px  rgb(242, 13, 13);
+}
+/* ---------------- */
+/* ----Portada---- */
+.all_pag_obj{
+    background-image: url(resources/media/image/john-towner-JgOeRuGD_Y4-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    height: 100vh;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: space-evenly;
+    
+}
+div.card{
+    margin-top: 30vh;
+    max-height: 350px;
+
+    min-width: 500px;
+    max-width: 500px;
+}
+.card img{
+    height: 25vh;
+    object-fit: cover;
+}
+/* --------------- */
+/* ----Contenido---- */
+.contenedor_home{
+    background-color: rgb(201, 154, 154);
+    height: 90vh;
+    border-top: 4px solid rgba(0, 0, 0, 0.623);
+}
+/* ----------------- */
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #171717
+}
+::-webkit-scrollbar-track {
+	background: #131313;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #343434;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #686868;
+}
+*/
