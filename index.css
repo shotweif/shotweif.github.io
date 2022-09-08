@@ -37,6 +37,7 @@
     position: fixed;
     bottom: 2vh;
     right: 4vh;
+    z-index: 90;
 }
 .goUp a{
     background-color: rgb(199, 186, 186);
@@ -63,7 +64,7 @@
     position: fixed;
     z-index: 1000;
 
-    background: linear-gradient(100deg, rgb(104, 48, 136) 25%, rgb(243, 9, 9) 50%, rgb(104, 48, 136) 75%);
+    background: linear-gradient(100deg, rgb(136, 48, 48) 25%, rgb(243, 9, 9) 50%, rgb(136, 48, 48) 75%);
     background-repeat: repeat;
     animation: gradient 5s linear infinite;
 }
@@ -92,7 +93,7 @@
 /*-- Logotipo --*/
 .image_logo{
     /*width: 10%;*/
-    height: 70px;
+    height: 65px;
     width: auto;
     background-color: rgb(20, 20, 20);
     padding: 2px;
@@ -182,33 +183,33 @@
 /* ---------------- *//*-------------------------------------------------------------------------------------------*/
 body{
     min-height: 100vh;
-    background-image: url(resources/media/image/john-towner-JgOeRuGD_Y4-unsplash.jpg);
+    background-image: url(resources/media/image/screem/benjamin-voros-phIFdC6lA4E-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
 }
 /* ---------------- */
 /* ----Portada---- *//*-------------------------------------------------------------------------------------------*/
 .space{
-    height: 11vh;
+    height: 8vh;
 }
 .space_card_top{
-    margin-top: 15px;
-    min-height: 100vh;
-    min-height: 87.5vh;
+    /*margin-top: 15px;*/
+    /*min-height: 100vh;*/
+    min-height: 75vh;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
-    align-items: center; 
+    align-items: center;
+    background-color: rgb(92, 92, 92);
 }
 .card{
     max-height: 350px;
     min-width: 400px;
     max-width: 600px;
     width: 500px;
-    margin-bottom: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 25px 20px;
     overflow: hidden;
     
 }
@@ -231,12 +232,62 @@ body{
 /* --------------- */
 /* ----Contenido---- *//*-------------------------------------------------------------------------------------------*/ 
 .contenedor_home{
-    background-color: rgb(201, 154, 154);
-    height: 90vh;
-    border-top: 4px solid rgba(0, 0, 0, 0.623);
+    /*border-top: 4px solid rgba(0, 0, 0, 0.623);*/
+    color: aliceblue;
+    min-height: 60vh;
+}
+.about_me{
+    background-color: rgb(110, 62, 62);
+    padding-top: 7vw;
+    margin: 0 400px;
+    border-radius: 20px;
+    margin-top: 10vw;
+}
+.about_me h2{
+    text-align: center;
+    color: rgb(240, 185, 185);
+}
+.text_home_1{
+    padding: 0 110px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+}
+/*----- mi foto -----*/
+.img_cont_me{
+    /*height: 530px;*/
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    background-color: rgba(255, 240, 240, 0.562);
+    /*backdrop-filter: blur(0.5rem);*/
+}
+.img_cont_me img{
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+    height: 210px;
+    width: 210px;
+    /*
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 800px;
+    max-height: 800px;*/
 }
 /* ----------------- */
-/* ---Footer--- */
+/* ---Footer--- *//*-------------------------------------------------------------------------------------------*/
 footer{
     background-color: rgba(12, 12, 12, 0.616);
     color: aliceblue;
@@ -244,12 +295,13 @@ footer{
     text-align: center;
 }
 .footer_text{
-    display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    margin-top: .5vh;
+    /*display: flex;
+    justify-content: space-evenly;
+    align-items: center;*/
 }
 .footer_text p{
+    padding-top: .5vh;
 }
 /* ------------ */
 /*----------------------------------------------------------------------------*/
