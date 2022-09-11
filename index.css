@@ -1,8 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 /* font-family: 'Permanent Marker', cursive; */
+
 *{
     padding: 0;
     margin: 0;
+}
+:root {
+    scroll-behavior: smooth;
+}
+/* ---Navegacion--- *//*-------------------------------------------------------------------------------------------*/
+.hamburger{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    z-index: 200;
+}
+.menu_navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(45deg, #333838e8 0%, #ae8b9ce8 100%);
+    backdrop-filter: blur(0.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    z-index: 210;
+}
+.spread{
+    transform: translate(0);
+}
+.menu_navegacion a{
+    text-decoration: none;
+    color: white;
 }
 /* --- /
 .time_mode {
@@ -187,6 +228,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    font-family: 'Poppins',sans-serif;
 }
 /* ---------------- */
 /* ----Portada---- *//*-------------------------------------------------------------------------------------------*/
@@ -201,8 +243,9 @@ body{
     flex-wrap:wrap;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(92, 92, 92);
-}
+    background-color: rgba(145, 93, 93, 0.884);
+    backdrop-filter: blur(0.5rem);
+}/*
 .card{
     max-height: 350px;
     min-width: 400px;
@@ -227,6 +270,106 @@ body{
     z-index: 60;
     background-color: white;
     margin-top: 1px;
+}*/
+.card_redir{
+    text-decoration: none;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    /*padding: 20px;*/
+    grid-gap: 40px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.cardP{
+    background-color: #201b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+
+    width: 450px;
+    margin: 25px 20px;
+    transition: transform .3s;
+}
+.cardP:hover{
+    transform: scale(1.1);
+}
+.container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    border-radius: 20px;
+}
+.container img{
+    width: 100%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+    /*transition: transform .5s;*/
+}/*
+.container img:hover{
+    transform: scale(1.2);
+}*/
+.container:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+.card1>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #0100ec50,
+        #fb36f450
+    );
+}
+.card2>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #2bdce350,
+        #42ffdb50
+    );
+}
+.card3>.container:after{
+    background-image: linear-gradient(
+        135deg,
+        #ffab1d50,
+        #f84f1c50
+    );
+}
+.details{
+    padding: 20px 10px;
+    min-height: 105px;
+}
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.details button{
+    background-color: #f0e6e6;
+    margin: 10px 0 0 15px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.details button:hover{
+    background-color: #ffbcbc;
 }
 /* --------------- */
 /* ----Contenido---- *//*-------------------------------------------------------------------------------------------*/ 
@@ -250,7 +393,7 @@ body{
     padding: 0 110px;
     padding-bottom: 30px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
 }
 /*----- mi foto -----*/
 .img_cont_me{
@@ -284,6 +427,11 @@ body{
     min-height: 300px;
     max-width: 800px;
     max-height: 800px;*/
+}
+/* ----------------- */
+/* ----------------- */
+.Contact_Us{
+    height: 60vh;
 }
 /* ----------------- */
 /* ---Footer--- *//*-------------------------------------------------------------------------------------------*/
