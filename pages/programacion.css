@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* font-family: 'Permanent Marker', cursive; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+:root {
+    scroll-behavior: smooth;
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+/* ---Navegacion--- cl *//*-------------------------------------------------------------------------------------------*/
+.barra_cell{
+    position: fixed;
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    height: 4.8rem;
+    z-index: 500;
+}
+.hamburger{
+    position: fixed;
+    top: 1.2rem;
+    right: 2rem;
+    background-color: white;
+    width: 40px;
+    height: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+
+    overflow: hidden;
+    transition: height .3s linear;
+    z-index: 1010;
+}
+.menu_navegacion{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(45deg, #333838e8 0%, #ae8b9ce8 100%);
+    backdrop-filter: blur(0.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    z-index: 210;
+}
+.spread{
+    transform: translate(0);
+}
+.menu_navegacion a{
+    text-decoration: none;
+    color: white;
+}
+.goUp{
+    display: flex;
+    position: fixed;
+    bottom: 2vh;
+    right: 4vh;
+    z-index: 90;
+}
+.goUp a{
+    background-color: rgb(199, 186, 186);
+    color: rgb(29, 29, 29);
+    text-decoration: none;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.goUp a img{
+    width: 100%;
+    height: auto;
+}
+/* ---Navegacion pc --- *//*-------------------------------------------------------------------------------------------*/
+.nav_bar_line{
+    width: 100%;
+    height: 8.8vh;
+    position: fixed;
+
+    background: linear-gradient(100deg, rgb(136, 48, 48) 25%, rgb(243, 9, 9) 50%, rgb(136, 48, 48) 75%);
+    background-repeat: repeat;
+    animation: gradient 5s linear infinite;
+
+    z-index: 1000;
+}
+@keyframes gradient {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -80rem 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.nav_bar{
+    width: 100%;
+    height: 8.5vh;
+    background-color: rgb(48, 48, 48);
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/*-- Logotipo --*/
+.image_logo{
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: rgb(20, 20, 20);
+    padding: 2px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.image_logo img{
+    height: 100%;
+    width: 100%;
+}
+/*-- Navegacion --*/
+.cont_btn_nav{
+    width: 100%;
+    height: 8.5vh;
+    text-align: center;
+    /*position: fixed;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color: blueviolet;*/
+    overflow: hidden;
+    transition: height .3s linear;
+
+}
+.cont_btn_nav a{
+    text-decoration: none;
+    color: white;
+    margin: 0 .2vh;
+    padding: .5vh 1.8vh;
+}
+.cont_btn_nav .btn_nav{
+    color: white;
+    font-size: 2vh;
+    border-radius: 20px;
+    transition: .5s ;
+    
+}
+.cont_btn_nav .btn_nav:hover{
+    text-shadow: 0px 0px 5px  rgb(242, 13, 13);
+    background-color: rgb(34, 34, 34);
+}
+.active{
+    text-shadow: 0px 0px 5px  rgb(242, 13, 13);
+    background-color: rgb(34, 34, 34);
+}
+
+@media screen and (max-width:1100px){
+    .cont_btn_nav{
+        overflow: hidden;
+        height: 0;
+    }
+    .hamburger{
+        overflow: hidden;
+        height: 40px    ;
+    }
+    .image_logo{
+        position: fixed;
+        top: .2rem;
+        left: 2rem;
+
+        height: 3.8rem;
+        width: 3.8rem;
+    }
+}
+@media screen and (max-width:800px){
+    .menu_navegacion{
+        width: 50vw;
+    }
+}
+@media screen and (max-width:500px){
+    .menu_navegacion{
+        width: 80vw;
+    }
+}
+@media screen and (max-width:360px){
+    .hamburger:p{
+        top: .8rem;
+        right: 2rem;
+    }
+    .image_logo{
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+}
