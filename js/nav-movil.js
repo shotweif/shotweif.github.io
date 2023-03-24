@@ -1,5 +1,5 @@
 const hamburger = document.querySelector('.hamburger')
-const menu = document.querySelector('.menu_navegacion')
+const menu = document.querySelector('.movil-container')
 
 console.log(menu)
 console.log(hamburger)

@@ -1,0 +1,23 @@
+.color-backgraun-web{
+    background-color: #353535;
+}
+.color-main{
+    background-color: #1b1b1b;
+}
+.color-navBar{
+    background-image: linear-gradient(to top, #1b1b1b77 0%, #0c0c0cbb 33%, #0c0c0cdc 66%, #0c0c0c 100%);
+}
+.color-navBar-movil{
+    background-color: #6b525254;
+    backdrop-filter: blur(1rem);
+}
+.color-img-nav{
+    background-color: #0a0a0a;
+}
+.color-text-nav a{
+    color: #ffffff;
+    transition: .3s;
+}
+.color-text-nav a:hover{
+    color: #ff8686;
+}

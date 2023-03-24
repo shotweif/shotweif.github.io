@@ -1,0 +1,43 @@
+/* defoult 0 */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* body and scroll */
+body{
+    width: 100%;
+    min-height: 100vh;/*
+    overflow: hidden;*/
+}
+body::-webkit-scrollbar{
+    width: .6rem;
+}
+body::-webkit-scrollbar-track{
+    border-radius: 1rem;
+    background-color: #727272;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 1rem;
+    background-color: #070707;  
+}
+/* Decoracion de vinculos */
+a{
+    text-decoration: none;
+}
+/* Clases espesificas */
+.form-circle{
+    border-radius: 100%;
+}
+.pst-mode-fixed{
+    position: fixed;
+}
+.pst-mode-relative{
+    position: relative;
+}
+.dsp-mode-none{
+    display: none;
+}
+.dsp-mode-flex{
+    display: flex;
+}

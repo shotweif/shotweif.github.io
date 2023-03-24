@@ -1,0 +1,199 @@
+/* font face */
+@font-face {
+    font-family: Cyberpunk;
+    src: url(../resource/font/Cyberpunk.ttf);
+}
+/* flex Elements */
+.barra, .container-st-img, .contenedor-img-port img,.movil-link,.class-active,
+.img-port, .contenedor-img-port{
+    display: flex;
+}/*
+body{
+    min-height: 120vh;
+}*/
+/*---------------------------------------*/
+/* ----------------- Barra de Navegacion */
+.header{
+    width: 100%;
+    height: 60vh;
+}
+.barra{
+    width: 100%;
+    height: 5.5rem;
+    top: 0;
+    z-index: 700;
+}
+/* Logo Shotweif -- nav */
+.container-st-img{
+    width: 6rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .5rem 0 2rem;
+}
+.container-st-img img{
+    width: 4.5rem;
+    height: 4.5rem;
+    object-fit: cover;
+}
+/* Menu de Navegacion -- nav */
+.link{
+    height: 100%;
+    position: relative;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+    align-items: center;
+}
+.link a{
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+/* Movil active mode */
+.movil-icon-container{
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 4.5rem;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.movil-icon-container i{
+    font-size: 3rem;
+    color: aliceblue;
+}
+.hamburger{
+    cursor: pointer;
+    transition: height .3s linear;
+    background-color: #ec2e2e;
+    border-radius: .6rem;
+    z-index: 750;
+}
+.movil-container{
+    width: 40%;
+    height: 100%;
+    display: none;
+    top: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(110%);
+    z-index: 800;
+}
+.spread{
+    transform: translate(0);
+}
+.movil-link{
+    flex-wrap: wrap;
+    width: 100%;
+}
+.movil-link a{
+    width: 100%;
+    font-size: 3.5rem;
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+}
+.movil-link a p{
+    margin: 1rem;
+    text-align: left;
+    padding-left: 30%;
+}
+/* Extras -- nav */
+.class-active{
+    width: 35%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    border-bottom: .2rem solid #ec2e2e;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+.class-active h2{
+    font-size: 3.6rem;
+    color: aliceblue;
+}
+/*---------------------------------------*/
+/*----------------- Cambio de resolucion */
+@media screen and (max-width:1499px){
+    .class-active{
+        display: none;
+    }
+}
+@media screen and (max-width:1200px){
+    .movil-link a{
+        font-size: 2.5rem;
+    }
+    .link{
+        display: none;
+    }
+    .movil-container, .movil-icon-container{
+        display: flex;
+    }
+}
+@media screen and (max-width:550px){
+    .movil-container{
+        width: 100%;
+    }
+    .movil-link a{
+        font-size: 1.5rem;
+    }
+}
+/*---------------------------------------*/
+/*-------------------- Portada de Inicio */
+.img-port{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+/* Imagen de portada -- port */
+.contenedor-img-port{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.contenedor-img-port::before{
+    width: 100%;
+    height: 60vh;
+    content: "";
+    top: 0;
+    right: 0;
+
+    position: absolute;
+    background-color: #00000034;
+}
+.contenedor-img-port img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Texto de portada */
+.title-port{
+    height: 60vh;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    user-select: none;
+}
+.title-port h3{
+    font-family: Cyberpunk;
+    text-align: left;
+    margin-left: 1.8rem;
+    font-size: 10rem;
+    color: aliceblue;
+    text-shadow: -4px 2px 20px #7e2bdd;
+}
+/*---------------------------------------*/
+/*----------------- Cambio de resolucion */
+@media screen and (max-width:1530px){
+    .title-port h3{
+        font-size: 5rem;
+    }
+}
+@media screen and (max-width:550px){
+    .title-port h3{
+        font-size: 3rem;
+    }
+}
