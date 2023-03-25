@@ -21,3 +21,6 @@
 .color-text-nav a:hover{
     color: #ff8686;
 }
+.color-active-background{
+    background-color: #ff8686;
+}
