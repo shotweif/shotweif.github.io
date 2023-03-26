@@ -14,67 +14,39 @@
     
     <!-- Web -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- ------------------------------------------------------------- -->
     <title>Shotweif web</title>
 </head>
+
 <!-- Cuerpo de la Web -->
 <body class="color-backgraun-web">
     <!-- Cabesera de la pagina -->
-
-    <section class="header">
+    <section class="header" id="header-pag">
         <!-- Barra de navegacion -->
-        <div class="barra pst-mode-fixed color-navBar">
-            <div class="container-st-img">
-                <img class="form-circle color-img-nav" src="resource/media/logo/superior shotweif logo - v2-min.png" alt="NordicLogoShotweif">
-            </div>
-            <!-- PC navegador -->
-            <nav class="link color-text-nav ">
-                <a href=""><p><i class='bn bx bx-home-circle'></i> Inicio</p></a>
-                <a href="pages/drawing.html"><p><i class='bx bx-paint'></i> Drawing</p></a>
-                <a href="pages/cosplays.html"><p><i class='bx bx-mask' ></i> Cosplays</p></a>
-                <a href=""><p><i class='bx bxs-shopping-bags'></i> Productos</p></a>
-                <a href=""><p><i class='bx bx-code-block'></i> Developer</p></a>
-                <a href=""><p><i class='bx bx-brain'></i> Sobre mi..</p></a>
-            </nav>
-            <!-- Movil navegador -->
-            <div class="movil-icon-container">
-                <i class='bx bx-menu-alt-left hamburger'></i>
-            </div>
-            <div class="movil-container pst-mode-fixed color-navBar-movil">
-                <nav class="movil-link color-text-nav">
-                    <a> <p></p></a>
-                    <a href=""><p><i class='bn bx bx-home-circle'></i> Inicio</p></a>
-                    <a href=""><p><i class='bx bx-paint'></i> Drawing</p></a>
-                    <a href=""><p><i class='bx bx-mask' ></i> Cosplays</p></a>
-                    <a href=""><p><i class='bx bxs-shopping-bags'></i> Productos</p></a>
-                    <a href=""><p><i class='bx bx-code-block'></i> Developer</p></a>
-                    <a href=""><p><i class='bx bx-brain'></i> Sobre mi..</p></a>
-                </nav>
-            </div>
-            <!-- Active page -->
-            <div class="class-active">
-                <h2>INICIO</h2>
-            </div>
-        </div>
-        <!-- Portada de inicio -->
-        <div class="img-port">
-            <div class="contenedor-img-port">
-                <img src="https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-            </div>
-            <div class="title-port">
-                <h3 class="titlePag-port"> Shotweif <br> web</h3>
-            </div>
-        </div>
+        <div class="Inicio-Page" id="pagID"></div>
     </section>
     <!-- ------------------------------------------------------------- -->
     <!-- Cuerpo de la pagina -->
     <section class="body">
-        <div class="container-prt1"></div>
+        <div class="container-prt1">
+            
+        </div>
         <div class="container-prt2"></div>
         <div class="container-prt3"></div>
     </section>
     <!-- Scripts --------------------------------------------------- -->
+    <!-- Dependencias de la navegacion -->
+    <script src="js/nav-text.js"></script>
     <script src="js/nav-movil.js"></script>
+    <!-- Dependencias webs -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Others -->
+
 </body>
 </html>
