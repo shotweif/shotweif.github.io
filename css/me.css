@@ -192,17 +192,18 @@ span.delay-7{
     /*justify-content: center;*/
     /*align-items: center;*/
     width: 100%;
+    min-height: 100vh;
 }
 /* Ventana flotante */
 .backgound-prf{
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 .main-mind{
     display: flex;
     width: 100%;
     /*min-height: 15rem;*/
-    height: 100%;
+    min-height: 100%;
     background-color: #0d0813ab;
     backdrop-filter: blur(0.5rem);
     flex-wrap: wrap;
@@ -222,9 +223,23 @@ span.delay-7{
 .container-div {
     width: 20rem;
     height: 20.5rem;
-    background-color: #56317a;
+    /*background-color: #56317a;*/
     display: flex;
     justify-content: center;
+}
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
 }
 .container-div .img-container{
     position: relative;
@@ -233,6 +248,7 @@ span.delay-7{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: float 6s ease-in-out infinite;
     /*margin: 2rem 0 1rem 0;*/
 }
  .container-div .img-container img{
@@ -244,7 +260,7 @@ span.delay-7{
 }
 .text-container{
     /*width: 60%;*/
-    background-color: #84fab0;
+    /*background-color: #84fab0;*/
     display: block;
     position: relative;
     display: flex;
@@ -271,7 +287,14 @@ span.delay-7{
     padding-bottom: 1rem;
     
 }
-.main-mind .text-container .line{
+.div-line-h{
+    width: 100%;
+    height: .5rem;
+    display: flex;
+    justify-content: center;
+
+}
+.line{
     width: 80%;
     height: .2rem;
     background-image: linear-gradient(to right, #b5a33a 0%, #be5b3d 31%, #56317a 100%);
@@ -285,29 +308,34 @@ span.delay-7{
 .gith{background-image: url("../resource/media/icons/social/gith.jpg");}
 .lnkd{background-image: url("../resource/media/icons/social/link.jpg");}
 
+.section-title{
+    width: 100%;
+}
+.section-title h2{
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+}
 .main-mind .social-container{
     width: 100%;
-    display: block;
-
+    /*display: block;*/
     position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
     padding: 1.5rem 0;
     overflow: hidden;
 }
 .block-social{
-    width: 100vh;
-    margin: .8rem 0;
+    width: 12rem;
+    margin: 8rem 0;
     position: relative;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 1rem;
+    /*padding: 0 1rem;*/
+    margin: 0 1rem;
 }
 .gen-container-social{
-    width: 60vh;
+    width: 12rem;
     height: 3rem;
     background-color: #ffffffa2;
     border: .2rem solid #ffffff;
@@ -330,21 +358,9 @@ span.delay-7{
     box-shadow: 0 0 10px #000000;
 
     display: flex;
-    position: relative;
+    position: absolute;
     left: -1rem;
     transition: .5s;
-}
-a{
-    text-decoration: none;
-}
-.social-name-page{
-    text-decoration: none;
-    margin-left: 2rem;
-    font-size: 1rem;
-}
-.social-name-page h2{
-    text-decoration: none;
-    color: #1a1a1a;
 }
 .social_ind{
     position: relative;
@@ -358,7 +374,6 @@ a{
 .gen-container-social:hover{
     background-color: #00000000;
     border: .2rem solid #e76c6c;
-    
     transition: .5s;
 }
 .gen-container-social:hover .social-name-page h2{
@@ -367,8 +382,8 @@ a{
 .gen-container-social::before{
     content: "";
     position: absolute;
-    width: 60vh;
-    height: 100%;
+    width: 12rem;
+    height: 4rem;
     border-radius: 5rem;
     background-color: #000000b4;
     z-index: -1;
@@ -397,26 +412,35 @@ a{
     background-color: transparent;
     box-shadow: 0 0 10px #000000;
 }
+/* Texto de la socialMedia */
+a{
+    text-decoration: none;
+}
+.social-name-page{
+    position: absolute;
+    left: 5rem;
+    display:flex;
+    font-size: .8rem;
+}
+.social-name-page h2{
+    color: #1a1a1a;
+}
 /*-----------------------------------------------------*/
 /*-----------------------------------------------------*/
 /*-- -CENTER CONTAINER- --*/
 @media screen and (max-width:1280px){
     .main-mind{
-        width: 80%;
+        width: 100%;
+    }
+    .container-div {
+        width: 15rem;
+        height: 15.5rem;
     }
 }
 /*-----------------------------------*/
-@media screen and (max-width:1270px){
-    .main-mind{
-        width: 90%;
-    }
-}
 @media screen and (max-width:600px){
     .block-social{
         width: 35vh;
-    }
-    .main-mind{
-        width: 80%;
     }
     .gen-container-social{
         width: 35vh;

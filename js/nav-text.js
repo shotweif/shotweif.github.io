@@ -32,42 +32,50 @@ const funcionAsigNav_Tible = () =>{
             identify = "ex"
             pagNameSelecter = pagName[0]
             letSecetPH = fhotosSection[0]
+            pagDir[0] = "#"
             break
         case "Drawing-Page":
             pageTitle = 'DRAWING'
             identify = "in"
             pagNameSelecter = pagName[1]
             letSecetPH = fhotosSection[1]
+            pagDir[1] = "#"
             break
         case "Cosplays-Page":
             pageTitle = 'COSPLAY'
             identify = "in"
             pagNameSelecter = pagName[2]
             letSecetPH = fhotosSection[2]
+            pagDir[2] = "#"
             break
         case "Productos-Page":
             pageTitle = 'SHOP'
             identify = "in"
             pagNameSelecter = pagName[3]
             letSecetPH = fhotosSection[3]
+            pagDir[3] = "#"
             break
         case "Developer-Page":
             pageTitle = 'DEVELOPER'
             identify = "in"
             pagNameSelecter = pagName[4]
             letSecetPH = fhotosSection[4]
+            pagDir[4] = "#"
             break
         case "Sobre-Page":
             pageTitle = 'SOBRE MI..'
             identify = "in"
             pagNameSelecter = pagName[5]
             letSecetPH = fhotosSection[5]
+            pagDir[5] = "#"
             break
         default:
     }
     if(identify != "ex"){
         for(i=0; i<pagDir.length; i++){
-            pagDir[i] = "../"+pagDir[i]
+            if(pagDir[i] != "#"){
+                pagDir[i] = "../"+pagDir[i]
+            }
         }
         for(i=0; i<elemetsDir.length;i++){
             elemetsDir[i] = "../"+elemetsDir[i] 
